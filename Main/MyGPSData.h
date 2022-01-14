@@ -8,6 +8,9 @@
 
 #ifndef MyGPSData_H_
 #define MyGPSData_H_
+
+#include <iomanip>
+
 class MyGPSData{
 	//TODO  create variables to read/write
 	public:

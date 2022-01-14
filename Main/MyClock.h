@@ -46,7 +46,7 @@ class MyStepper{
 #define CLOCK_WISE         1
 #define COUNTER_CLOCK_WISE 0
 	void MyStepper::nextStep(bool direction){
-		//Step in the correct direciton
+		//Step in the correct direction
 		if (direction){ stepPointer++;}
 		else{			stepPointer--;}
 		//loop around
