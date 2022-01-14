@@ -19,7 +19,6 @@ class MyTemperature{
     private:
     float temperature;
 	const int R0 = 100000;            // R0 = 100k
-	const int B = 4275;               // B value of the thermistor
     float calibrationFactor;
     int zeroOffset;
     volatile int measurment; //may be updated in ISR
