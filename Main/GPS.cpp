@@ -17,7 +17,7 @@ myGPS::myGPS(){
 char *myGPS::read()
 {
 	char * rxp = NULL;
-	if(update() == 1){ //REad vollst?ndig
+	if(update() == 1){ //Read vollstaendig
 		rxp = (bufferNum == 1) ? rxBuffer[0] : rxBuffer[1]; // den jeweils gef?llten nehmen, der andere, auf den bufferNum zeigt, wird gerade beschrieben
 	}
 	return rxp;

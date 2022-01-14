@@ -9,13 +9,13 @@
 #ifndef MyGPS_H_
 #define MyGPS_H_
 class MyGPS{
-	
+	//TODO
 	public:
-	char[5]	getTime(); //TODO just to Timeformat
+	char[5]	getTime(); //TODO adjust to Timeformat
 	char[]	getLatLong();
 	char[]	getConnectionQuality();
 
-	}MyGPS;
+	};
 
 
 

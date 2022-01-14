@@ -23,7 +23,7 @@ ThreadController controller = ThreadController();
 #include "MyTouch.h"
 
 myGPS gps;
-
+volatile Touch myTouch;
 
 //////////////////////////////////////////////////////////////////////////
 //Example Implementing a Thread
@@ -49,18 +49,34 @@ Thread* viewThread = new Thread();
 /*Thread for Views
 * executes attached function
 */
-inline void viewThread(void){				  //This Function is Inline -> Code will be wirtten into Place where used in Code (Less clutter in Setup)
+inline void setupViewThread(void){				  //This Function is Inline -> Code will be wirtten into Place where used in Code (Less clutter in Setup)
 	viewThread->onRun(view->executeFunction); //TODO Verify, that a change of functions changes what is done
 	viewThread->setInterval(500);
 	controller.add(&viewThread);			  //TODO may need to be deleted and redone with view change
+}
+
+Thread* touchSensorThread = new Thread();
+inline void setupTouchSensorThread(void){				  //This Function is Inline -> Code will be wirtten into Place where used in Code (Less clutter in Setup)
+	touchSensorThread->onRun(myTouch.updateTouch); 
+	touchSensorThread->setInterval(100);
+	controller.add(&touchSensorThread);
+}
+
+//TODO get GPSdata to be known and update with gps updating time
+Thread* gpsThread = new Thread();
+inline void setupGpsThread(void){				  //This Function is Inline -> Code will be wirtten into Place where used in Code (Less clutter in Setup)
+	gpsThread->onRun(gps.update);
+	gpsThread->setInterval(100);
+	controller.add(&gpsThread);
 }
 
 
 void setup(){
 	setupThread();
     setupViews();
-	viewThread();
-	MainView.executeFunction  = mainViewWorkings; //example of giving a specific View a function
+	setupViewThread();
+	setupTouchSensorThread();
+	setupGpsThread();
     gps = myGPS(); //uses serial
     Wire.begin();  //i2c
     //HID
