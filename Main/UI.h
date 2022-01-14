@@ -18,6 +18,7 @@ class View{
 	View* Deeper         ;  //The View when Touch short
 	View* next           ;  //The View when Encoder clockwise
 	View* previous       ;  //The View when Encoder counterclockwise
+	void* (executeFunction)();  //The pointer to the function corresponding to the current view
 	
 	View(
 		View* TopScreen     ,
@@ -27,9 +28,12 @@ class View{
 	);
 
 	};
-
+//////////////////////////////////////////////////////////////////////////
+//View to Select the currently Seen view
 volatile View* view; //To be given to LCD and changed by Encoder or Touch
-	
+
+//////////////////////////////////////////////////////////////////////////
+//List of all Possible Views
 View MainView;
 	View MainViewSettings,TimeSettingsTimeZone,TimeSettingsTime,TimeSettingsTimeformat;
 	View MainViewSettingsSetUhrwerk,ClockSettings;
@@ -37,6 +41,6 @@ View MainView;
 View WeckerView,WeckerViewSettings;
 View WeltStadtView,WeltStadtViewSettings;
 
-
+//////////////////////////////////////////////////////////////////////////
 
 #endif /* UI_H_ */
