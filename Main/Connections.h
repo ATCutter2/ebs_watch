@@ -11,8 +11,8 @@
 
 //GPS
 //Used as Serial This is only Backup
-#define GPS_PIN_RX (0) //TODO Proofcheck
-#define GPS_PIN_RX (1) //TODO Proofcheck
+#define GPS_PIN_RX (1) //on GPS Module to TX on Seeduino
+#define GPS_PIN_TX (0) //on GPS Module to RX on Seeduino
  
 //Display
 //Used as Wire This is only Backup

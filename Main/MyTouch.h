@@ -16,7 +16,7 @@ struct Touchtime{
 };
 class Touch{
     int touchpin;
-    static int touchounter; //TODO static seems unnessesary
+    int touchounter; //TODO check if needs to be static (will it reset with each call of touch?)
     Touchtime type;
 
     Touch();
@@ -24,7 +24,7 @@ class Touch{
     void updateTouch();
     
 
-}Touch;
+};
 
 //extern Touch touch;
 

@@ -6,10 +6,10 @@
  */ 
 
 
-#ifndef MyGPS_H_
-#define MyGPS_H_
-class MyGPS{
-	//TODO
+#ifndef MyGPSData_H_
+#define MyGPSData_H_
+class MyGPSData{
+	//TODO  create variables to read/write
 	public:
 	char[5]	getTime(); //TODO adjust to Timeformat
 	char[]	getLatLong();

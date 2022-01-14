@@ -19,7 +19,7 @@
 	 //int daylightsavingDate2;
 	 };
 
-countryTime worldCountryTimes[24] ={
+countryTime worldCountryTime[24] ={
 	{"Amsterdam"       , 1  },  
 	{"Anchorage"       ,-9  },
 	{"Bangkok"         , 7  },

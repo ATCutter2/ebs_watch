@@ -20,10 +20,16 @@ ThreadController controller = ThreadController();
 //////////////////////////////////////////////////////////////////////////
 #include "UI.h"
 #include "GPS.h"
+#include "MyGPSData"
 #include "MyTouch.h"
 
+
+//////////////////////////////////////////////////////////////////////////
+//Global Variables
 myGPS gps;
-volatile Touch myTouch;
+volatile MyGPSData gpsData;//to get current gpsData
+volatile Touch myTouch;    //to get current touchstate
+
 
 //////////////////////////////////////////////////////////////////////////
 //Example Implementing a Thread
@@ -39,7 +45,7 @@ inline void setupThread(void){
 	//TODO Adjust Threads
 		// Configure myThread
 		myThread->onRun(niceCallback); //use functionName here
-		myThread->setInterval(500);  
+		myThread->setInterval(500);  //all how many ms should this be executed? -> this uber should be as high as possible
 		controller.add(&myThread);  //Adds thread to list to be executed
 }
 //////////////////////////////////////////////////////////////////////////

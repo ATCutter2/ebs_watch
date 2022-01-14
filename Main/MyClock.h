@@ -2,7 +2,7 @@
  * MyClock.h
  * Set Analog Clock via Stepper
  * Created: 23/12/2021 09:33:43
- *  Author: a
+ *  Author: Adrian Schnyder
  */ 
 
 
@@ -75,12 +75,13 @@ class MyClock{
 	
 	public:
 	/************************************************************************/
-	/* Allow Setting of Arms via Encoder    
+	/* TODO Allow Setting of Arms via Encoder    
 	Needs Paralellprocessing                                                                 */
 	/************************************************************************/
 	void adjustTimeArms();
+	
 	/************************************************************************/
-	/* Set Time To this Number                                                                     */
+	/* TODO Set Time To this Number                                                                     */
 	/************************************************************************/
 	void setTime();
 	
