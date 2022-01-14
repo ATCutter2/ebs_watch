@@ -4,11 +4,11 @@
  * Created: 23/12/2021 09:21:03
  * Author : Adrian Schnyder
  */ 
-#include <Arduino.h>
+#include "Arduino.h"
 #include <avr/io.h>
 #include <Wire.h>
 #include <time.h>
-
+#include <Serial.h>
 
 //////////////////////////////////////////////////////////////////////////
 // implementing "Multitasking" 
