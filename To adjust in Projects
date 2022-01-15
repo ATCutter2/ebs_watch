@@ -1,0 +1,33 @@
+Path in Lines:
+138             <Value>libArduinoCore.a</Value>
+from :
+          <ListValues>
+            <Value>libm
+            <Value>libA
+          </ListValues>
+
+143
+144
+145
+paths:
+
+
+257
+Item Group
+ <ItemGroup>
+   <Compile Include="Encoder.cpp">
+     <SubType>compile</SubType>
+   </Compile>
+
+<ItemGroup>
+  <Folder Include="include\" />
+  <Folder Include="include\core\" />
+  <Folder Include="include\libraries\" />
+  <Folder Include="include\libraries\grove_-_lcd_rgb_backlight\" />
+  <Folder Include="include\libraries\timerone\" />
+  <Folder Include="include\libraries\timerone\config\" />
+  <Folder Include="include\libraries\Wire\" />
+  <Folder Include="include\libraries\Wire\utility\" />
+  <Folder Include="include\variants\" />
+  <Folder Include="include\variants\standard\" />
+</ItemGroup>

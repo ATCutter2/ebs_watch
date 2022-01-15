@@ -80,19 +80,19 @@ void setupViews(void){
 	WeltStadtView   = View(&MainView,&MainViewSettings,&MainView,&WeckerView);
 		WeltStadtViewSettings = View(&MainView ,&WeltStadtViewSettings ,&WeltStadtViewSettings ,&WeltStadtViewSettings); //TODO Test if walking trough settings works
 	
-		MainView					.executeFunction  = &workingsMainView				   ; //giving a specific View a function
-		MainViewSettings			.executeFunction  = &workingsMainViewSettings		   ; 
-		TimeSettingsTimeZone		.executeFunction  = &workingsTimeSettingsTimeZone	   ; 
-		TimeSettingsTime			.executeFunction  = &workingsTimeSettingsTime		   ; 
-		TimeSettingsTimeformat		.executeFunction  = &workingsTimeSettingsTimeformat	   ; 
+		MainView					.executeFunction  = workingsMainView				   ; //giving a specific View a function
+		MainViewSettings			.executeFunction  = workingsMainViewSettings		   ; 
+		TimeSettingsTimeZone		.executeFunction  = workingsTimeSettingsTimeZone	   ; 
+		TimeSettingsTime			.executeFunction  = workingsTimeSettingsTime		   ; 
+		TimeSettingsTimeformat		.executeFunction  = workingsTimeSettingsTimeformat	   ; 
 		
-		MainViewSettingsSetUhrwerk	.executeFunction  = &workingsMainViewSettingsSetUhrwerk ; 
-		ClockSettings				.executeFunction  = &workingsClockSettings			   ; 
+		MainViewSettingsSetUhrwerk	.executeFunction  = workingsMainViewSettingsSetUhrwerk ; 
+		ClockSettings				.executeFunction  = workingsClockSettings			   ; 
 
-		WeckerView					.executeFunction  = &workingsWeckerView				   ; 
-		WeckerViewSettings			.executeFunction  = &workingsWeckerViewSettings		   ; 
-		WeltStadtView				.executeFunction  = &workingsWeltStadtView			   ; 
-		WeltStadtViewSettings		.executeFunction  = &workingsWeltStadtViewSettings	   ; 
+		WeckerView					.executeFunction  = workingsWeckerView				   ; 
+		WeckerViewSettings			.executeFunction  = workingsWeckerViewSettings		   ; 
+		WeltStadtView				.executeFunction  = workingsWeltStadtView			   ; 
+		WeltStadtViewSettings		.executeFunction  = workingsWeltStadtViewSettings	   ; 
 
 }
 
