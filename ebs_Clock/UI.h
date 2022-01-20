@@ -20,7 +20,7 @@ class View{
 	View* previous       ;  //The View when Encoder counterclockwise
 	unsigned int id      ;
 	//void* (executeFunction)();  //The pointer to the function corresponding to the current view //Pogramm does not like this....
-		View(void); //seems to be needed vor declaration?
+		View(void); //seems to be needed for declaration?
 		
 	View(
 		View* TopScreen     ,
@@ -32,7 +32,7 @@ class View{
 
 	};
 //////////////////////////////////////////////////////////////////////////
-//View to Select the currently Seen view
+//View to Select the currently Seen view Update in HMI Loop
 volatile View* Global_selectedView; //To be given to LCD and changed by Encoder or Touch
 
 //////////////////////////////////////////////////////////////////////////
