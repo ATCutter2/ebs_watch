@@ -15,6 +15,7 @@ struct Touchtime{
     bool shortTouch :1 ; 
 };
 class Touch{
+	public:
     int touchpin;
     int touchounter; //TODO check if needs to be static (will it reset with each call of touch?)
     Touchtime type;

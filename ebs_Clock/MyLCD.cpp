@@ -8,11 +8,12 @@
 #include "MyLCD.h"
 
 
+
 inline void MyLCD::setup(void){
 	lcd.begin(16, 2);
 
-	lcdThread(printViewToLCD); //use functionName here //TODO Write This into Main Loop
-	lcdThread->setInterval(500);
+// 	lcdThread(printViewToLCD); //use functionName here //TODO Write This into Main Loop
+// 	lcdThread->setInterval(500);
 
 }
 
@@ -57,3 +58,4 @@ void MyLCD::centerText(char* text,byte length){
     }
 
 }
+
