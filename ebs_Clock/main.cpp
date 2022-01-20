@@ -56,7 +56,7 @@ Thread* viewThread = new Thread();
 * executes attached function
 */
 inline void setupViewThread(void){				  //This Function is Inline -> Code will be wirtten into Place where used in Code (Less clutter in Setup)
-	viewThread->onRun(view->executeFunction); //TODO Verify, that a change of functions changes what is done
+	viewThread->onRun(viewLoop); //TODO Verify, that a change of functions changes what is done
 	viewThread->setInterval(500);
 	controller.add(&viewThread);			  //TODO may need to be deleted and redone with view change
 }
