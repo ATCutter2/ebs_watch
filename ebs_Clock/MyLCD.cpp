@@ -11,7 +11,7 @@
 inline void MyLCD::setup(void){
 	lcd.begin(16, 2);
 
-	lcdThread(printViewToLCD); //use functionName here
+	lcdThread(printViewToLCD); //use functionName here //TODO Write This into Main Loop
 	lcdThread->setInterval(500);
 
 }
@@ -43,7 +43,7 @@ void MyLCD::blink(){
 	lcd.setBacklight(false);
 }
 
-void MyLCD::centerText(char* text,unsigned byte length){
+void MyLCD::centerText(char* text,byte length){
     char txtCentered   [16];
     int offset = rowlength-length;
     if(offset<2){

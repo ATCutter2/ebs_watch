@@ -6,9 +6,9 @@
  */ 
 #include "Arduino.h"
 #include <avr/io.h>
-#include <Wire.h>
+#include "include\libraries\Wire\Wire.h"
 #include <time.h>
-#include <Serial.h>
+#include "include\core\HardwareSerial.h"
 
 //////////////////////////////////////////////////////////////////////////
 // implementing "Multitasking" 

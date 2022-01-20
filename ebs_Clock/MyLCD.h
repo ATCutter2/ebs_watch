@@ -8,9 +8,9 @@
 #ifndef MyLCD_H_
 #define MyLCD_H_
 
-#include <Wire.h>
-#include <rgb_lcd.h>
-#include <string.h>
+#include "include\libraries\Wire\Wire.h"
+#include "include\libraries\grove_-_lcd_rgb_backlight\rgb_lcd.h"
+#include "include\core\WString.h"
 
 //libraries from Ivan Seidel https://github.com/ivanseidel/ArduinoThread
 #include "ArduinoThread/Thread.h"
@@ -37,7 +37,7 @@ class MyLCD{
 	void printViewToLCD();	
 	void blink();
 
-    void centerText(char* text,unsigned byte length);
+    void centerText(char* text,byte length);
 
 	};
 
