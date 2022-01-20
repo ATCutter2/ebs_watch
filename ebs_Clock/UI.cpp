@@ -29,40 +29,99 @@ View::View(
 //////////////////////////////////////////////////////////////////////////
 // Setup the Functions to be executed according to view here
 void workingsMainView				   (){
-	
+	//TODO Update the following with current values
+	//viewchanes are to be executed in in userInput thread
+	/*
+	MainView.topString   	=            ;
+	MainView.lowerString 	=            ;
+	*/
 }
 void workingsMainViewSettings		   (){
-	
-	
+	//TODO Update the following with current values
+	//viewchanes are to be executed in in userInput thread
+	/*
+	MainViewSettings.topString   	=            ;
+	MainViewSettings.lowerString 	=            ;
+	*/
 }
 void workingsTimeSettingsTimeZone	   (){
-	
-	
+	//TODO Update the following with current values
+	//viewchanes are to be executed in in userInput thread
+	/*
+	TimeSettingsTimeZone.topString   	=            ;
+	TimeSettingsTimeZone.lowerString 	=            ;
+	*/
 }
 void workingsTimeSettingsTime		   (){
-	
+	//TODO Update the following with current values
+	//viewchanes are to be executed in in userInput thread
+	/*
+	TimeSettingsTime.topString   	=            ;
+	TimeSettingsTime.lowerString 	=            ;
+	*/
 }
 void workingsTimeSettingsTimeformat	   (){
-	
+	//TODO Update the following with current values
+	//viewchanes are to be executed in in userInput thread
+	/*
+	TimeSettingsTimeformat.topString   	=            ;
+	TimeSettingsTimeformat.lowerString 	=            ;
+	*/
 }
 
 void workingsMainViewSettingsSetUhrwerk(){
+	//TODO Update the following with current values
+	//viewchanes are to be executed in in userInput thread
+	/*
+	MainViewSettingsSetUhrwerk.topString   	=            ;
+	MainViewSettingsSetUhrwerk.lowerString 	=            ;
+	*/
 }
 
 void workingsClockSettings			   (){
-}
+	//TODO Update the following with current values
+	//viewchanes are to be executed in in userInput thread
+	/*
+	ClockSettings.topString   	=            ;
+	ClockSettings.lowerString 	=            ;
+	*/
+	}
 
 
 void workingsWeckerView				   (){
+	//TODO Update the following with current values
+	//viewchanes are to be executed in in userInput thread
+	/*
+	WeckerView.topString   	=            ;
+	WeckerView.lowerString 	=            ;
+	*/
 }
 
 void workingsWeckerViewSettings		   (){
+	//TODO Update the following with current values
+	//viewchanes are to be executed in in userInput thread
+	/*
+	WeckerViewSettings.topString   	=            ;
+	WeckerViewSettings.lowerString 	=            ;
+	*/
 }
 
 void workingsWeltStadtView			   (){
-}
+	//TODO Update the following with current values
+	//viewchanes are to be executed in in userInput thread
+	/*
+	WeltStadtView.topString   	=            ;
+	WeltStadtView.lowerString 	=            ;
+	*/
+	}
 
 void workingsWeltStadtViewSettings	   (){
+	//TODO Update the following with current values
+	//viewchanes are to be executed in in userInput thread
+	/*
+	WeltStadtViewSettings.topString   	=            ;
+	WeltStadtViewSettings.lowerString 	=            ;
+	*/
 }
 
 //////////////////////////////////////////////////////////////////////////
