@@ -264,6 +264,24 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Connections.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="CountryTime.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Encoder.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Encoder.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="GPS.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="GPS.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="include\core\Arduino.h">
       <SubType>compile</SubType>
     </Compile>
@@ -343,6 +361,9 @@
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="MyClock.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MyEncoder.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="MyGPSData.h">

@@ -24,7 +24,7 @@ class MyTemperature{
     int zeroOffset;
     volatile int measurment; //may be updated in ISR
     
-    void convertInputToTemperature(int measurment);
+    float convertInputToTemperature();
     public:
     String pin;
 
@@ -32,7 +32,7 @@ class MyTemperature{
 
     //m1 is assumed to be Temperature > 0°C
     //ZeroTemp is at 0°C (put in Glass with ice whater)
-    void calibrate(CalibrationPair m; CalibrationPair ZeroTemp);
+    void calibrate(CalibrationPair m, CalibrationPair ZeroTemp);
 
     //to be called when time permits
     void measure(void);

@@ -127,7 +127,7 @@ void workingsWeltStadtViewSettings	   (){
 //////////////////////////////////////////////////////////////////////////
 //Loop Function
 void viewLoop(){
-	switch(Global_selectedView.id){
+	switch(Global_selectedView->id){
 		case 1:   workingsMainView				     (); break;
 		case 2:   workingsMainViewSettings		     (); break;
 		case 3:   workingsTimeSettingsTimeZone	     (); break;
