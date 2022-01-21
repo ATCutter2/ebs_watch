@@ -8,21 +8,18 @@
 #ifndef MyLCD_H_
 #define MyLCD_H_
 
-#include <Wire.h>
-#include <rgb_lcd.h>
-#include <string.h>
+#include "include\libraries\Wire\Wire.h"
+#include "include\libraries\grove_-_lcd_rgb_backlight\rgb_lcd.h"
+#include "include\core\WString.h"
 
 //libraries from Ivan Seidel https://github.com/ivanseidel/ArduinoThread
 #include "ArduinoThread/Thread.h"
 #include "ArduinoThread/ThreadController.h"
-//My Thread (as a pointer)
-Thread* lcdThread = new Thread();
-
-
 
 #include "UI.h"
 //rgb_lcd lcd;
-Adafruit_RGBLCDShield lcd = Adafruit_RGBLCDShield();
+//Adafruit_RGBLCDShield lcd = Adafruit_RGBLCDShield();
+rgb_lcd lcd = rgb_lcd();
 
 class MyLCD{
     const int rowlength   = 16;
@@ -32,12 +29,12 @@ class MyLCD{
 
 	inline void setup();	
 	void printTest(void);	
-	void setView(View view);
+	void setView(View* view);
 	//Updates threads
 	void printViewToLCD();	
 	void blink();
 
-    void centerText(char* text,unsigned byte length);
+    void centerText(char* text,byte length);
 
 	};
 

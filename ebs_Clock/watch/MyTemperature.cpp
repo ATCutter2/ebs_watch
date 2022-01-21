@@ -22,7 +22,7 @@ void MyTemperature::setupTemperatureSensor(String pinID){
     pin = pinID;
 	
 }
-void MyTemperature::calibrate(CalibrationPair m, CalibrationPair ZeroTemp){
+void MyTemperature::calibrate(CalibrationPair m; CalibrationPair ZeroTemp){
     //y = m*x+c
     // c = 
     zeroOffset = -ZeroTemp.measuredValue;
@@ -30,8 +30,9 @@ void MyTemperature::calibrate(CalibrationPair m, CalibrationPair ZeroTemp){
     calibrationFactor = (m.isTemperature - ZeroTemp.isTemperature) /( m.measuredValue -ZeroTemp.measuredValue);
 }
 
+}
 void MyTemperature::measure(void){
-    measurment = analogRead(pin.toInt());
+    measurment = analogRead(sensorPin);
 }
 
 float MyTemperature::get(void){

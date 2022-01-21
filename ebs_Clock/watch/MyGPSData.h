@@ -8,14 +8,12 @@
 
 #ifndef MyGPSData_H_
 #define MyGPSData_H_
-
-#include "include\core\WString.h"
 class MyGPSData{
 	//TODO  create variables to read/write
 	public:
-	String	getTime()               ; //TODO adjust to Timeformat
-	String	getLatLong()            ;
-	String	getConnectionQuality()  ;
+	char[5]	getTime(); //TODO adjust to Timeformat
+	char[]	getLatLong();
+	char[]	getConnectionQuality();
 
 	};
 

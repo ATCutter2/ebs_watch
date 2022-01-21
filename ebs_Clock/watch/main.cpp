@@ -6,9 +6,9 @@
  */ 
 #include "Arduino.h"
 #include <avr/io.h>
-#include "include\libraries\Wire\Wire.h"
+#include <Wire.h>
 #include <time.h>
-#include "include\core\HardwareSerial.h"
+#include <Serial.h>
 
 //////////////////////////////////////////////////////////////////////////
 // implementing "Multitasking" 
@@ -18,23 +18,20 @@
 // ThreadController that will control all threads
 ThreadController controller = ThreadController();
 //////////////////////////////////////////////////////////////////////////
-#include "Connections.h"
 #include "UI.h"
 #include "GPS.h"
-#include "MyGPSData.h"
+#include "MyGPSData"
 #include "MyTouch.h"
-#include "MyLCD.h"
+
 
 //////////////////////////////////////////////////////////////////////////
 //Global Variables
-MyLCD m_Lcd;
 myGPS gps;
 volatile MyGPSData gpsData;//to get current gpsData
 volatile Touch myTouch;    //to get current touchstate
 
 
 //////////////////////////////////////////////////////////////////////////
-/*
 //Example Implementing a Thread
 //This Function is Inline -> Code will be wirtten into Place where used in Code (Less clutter in Setup)
 //My Thread (as a pointer)
@@ -51,7 +48,6 @@ inline void setupThread(void){
 		myThread->setInterval(500);  //all how many ms should this be executed? -> this uber should be as high as possible
 		controller.add(&myThread);  //Adds thread to list to be executed
 }
-*/
 //////////////////////////////////////////////////////////////////////////
 
 
@@ -60,7 +56,7 @@ Thread* viewThread = new Thread();
 * executes attached function
 */
 inline void setupViewThread(void){				  //This Function is Inline -> Code will be wirtten into Place where used in Code (Less clutter in Setup)
-	viewThread->onRun(viewLoop); //TODO Verify, that a change of functions changes what is done
+	viewThread->onRun(view->executeFunction); //TODO Verify, that a change of functions changes what is done
 	viewThread->setInterval(500);
 	controller.add(&viewThread);			  //TODO may need to be deleted and redone with view change
 }
@@ -80,16 +76,9 @@ inline void setupGpsThread(void){				  //This Function is Inline -> Code will be
 	controller.add(&gpsThread);
 }
 
-//My Thread (as a pointer)
-Thread* lcdThread = new Thread();
-inline void setupLCDThread(void){				  //This Function is Inline -> Code will be wirtten into Place where used in Code (Less clutter in Setup)
-	lcdThread->onRun(m_Lcd.printViewToLCD);
-	lcdThread->setInterval(500);
-	controller.add(&lcdThread);
-}
 
 void setup(){
-	//setupThread();
+	setupThread();
     setupViews();
 	setupViewThread();
 	setupTouchSensorThread();
@@ -98,7 +87,7 @@ void setup(){
     Wire.begin();  //i2c
     //HID
     pinMode(TouchButton, INPUT_PULLUP);
-    myTouch.touchpin = TouchButton;
+    Touch.touchpin = TouchButton;
     pinMode(EncoderA, INPUT_PULLUP);
     pinMode(EncoderB, INPUT_PULLUP);
 

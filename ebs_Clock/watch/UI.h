@@ -15,25 +15,22 @@ class View{
 	char topString   [16];  //I2C Display
 	char lowerString [16];  //I2C Display
     View* Top            ;  //The View when Touch long
-	View* Deeper         ;  //The View when Touch shorts
+	View* Deeper         ;  //The View when Touch short
 	View* next           ;  //The View when Encoder clockwise
 	View* previous       ;  //The View when Encoder counterclockwise
-	unsigned int id      ;
-	//void* (executeFunction)();  //The pointer to the function corresponding to the current view //Pogramm does not like this....
-		View(void); //seems to be needed for declaration?
-		
+	void* (executeFunction)();  //The pointer to the function corresponding to the current view
+	
 	View(
 		View* TopScreen     ,
 		View* DeeperScreen  ,
 		View* nextScreen    ,
-		View* previousScreen,
-		unsigned int identifier
+		View* previousScreen
 	);
 
 	};
 //////////////////////////////////////////////////////////////////////////
-//View to Select the currently Seen view Update in HMI Loop
-volatile View* Global_selectedView; //To be given to LCD and changed by Encoder or Touch
+//View to Select the currently Seen view
+volatile View* view; //To be given to LCD and changed by Encoder or Touch
 
 //////////////////////////////////////////////////////////////////////////
 //List of all Possible Views

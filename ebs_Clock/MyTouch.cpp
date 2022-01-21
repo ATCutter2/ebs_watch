@@ -10,6 +10,7 @@ void Touch::updateTouch(){
     const int SHORT_TOUCH    = 6    ;
     const int LONG_TOUCH     = 200  ;
     const int MAX_TIME_TOUCH = 1000 ;
+	unsigned int touchCounter = 0;
 
     if(digitalRead(touchpin)){
        if(touchCounter<MAX_TIME_TOUCH){
